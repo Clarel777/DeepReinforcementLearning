@@ -1,0 +1,12 @@
+Ubuntu 16.04 LTS 64 bit
+sudo apt-get install python-pip
+sudo pip install keras
+sudo pip install tensorflow
+sudo pip install matplotlib
+sudo pip install IPython
+#pip install IPython==5.5 for 14.04
+sudo apt-get install graphviz
+#pip install pydot==1.2.3
+sudo pip install pydot graphviz
+sudo apt-get install python-tk
+sudo apt-get install git
