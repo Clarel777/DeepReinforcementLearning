@@ -100,7 +100,7 @@ while 1:
         print('')
 
         if iteration % 5 == 0:
-            pickle.dump( memory, open( run_folder + "memory/memory" + iteration + ".p", "wb" ) )
+            pickle.dump( memory, open( run_folder + "memory/memory" + str(iteration) + ".p", "wb" ) )
 
         lg.logger_memory.info('====================')
         lg.logger_memory.info('NEW MEMORIES')

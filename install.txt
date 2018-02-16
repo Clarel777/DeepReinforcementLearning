@@ -4,9 +4,9 @@ sudo pip install keras
 sudo pip install tensorflow
 sudo pip install matplotlib
 sudo pip install IPython
-#pip install IPython==5.5 for 14.04
+#pip install IPython==5.5 for python 2.7
 sudo apt-get install graphviz
-#pip install pydot==1.2.3
 sudo pip install pydot graphviz
+sudo pip install h5py
 sudo apt-get install python-tk
 sudo apt-get install git
