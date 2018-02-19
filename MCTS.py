@@ -74,6 +74,7 @@ class MCTS():
 			for action, edge in currentNode.edges:
 				Nb = Nb + edge.stats['N']
 
+                        simulatedAction = None
 			for idx, (action, edge) in enumerate(currentNode.edges):
 
 				U = self.cpuct * \
