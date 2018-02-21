@@ -4,7 +4,8 @@ import logging
 import config
 import numpy as np
 
-import matplotlib.pyplot as plt
+if not config.CLN:
+	import matplotlib.pyplot as plt
 
 from keras.models import Sequential, load_model, Model
 from keras.layers import Input, Dense, Conv2D, Flatten, BatchNormalization, Activation, LeakyReLU, add
