@@ -11,9 +11,10 @@ import config
 import loggers as lg
 import time
 
-import matplotlib.pyplot as plt
-from IPython import display
-import pylab as pl
+if not config.CLN:
+        import matplotlib.pyplot as plt
+        from IPython import display
+        import pylab as pl
 
 
 class User():
@@ -200,16 +201,17 @@ class Agent():
 			self.train_value_loss.append(round(fit.history['value_head_loss'][config.EPOCHS - 1],4)) 
 			self.train_policy_loss.append(round(fit.history['policy_head_loss'][config.EPOCHS - 1],4)) 
 
-		plt.plot(self.train_overall_loss, 'k')
-		plt.plot(self.train_value_loss, 'k:')
-		plt.plot(self.train_policy_loss, 'k--')
+                if not CLN:
+			plt.plot(self.train_overall_loss, 'k')
+			plt.plot(self.train_value_loss, 'k:')
+			plt.plot(self.train_policy_loss, 'k--')
 
-		plt.legend(['train_overall_loss', 'train_value_loss', 'train_policy_loss'], loc='lower left')
+			plt.legend(['train_overall_loss', 'train_value_loss', 'train_policy_loss'], loc='lower left')
 
-		display.clear_output(wait=True)
-		display.display(pl.gcf())
-		pl.gcf().clear()
-		time.sleep(1.0)
+                        display.clear_output(wait=True)
+                        display.display(pl.gcf())
+                        pl.gcf().clear()
+                        time.sleep(1.0)
 
 		print('\n')
 		self.model.printWeightAverages()
