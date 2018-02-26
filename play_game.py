@@ -12,4 +12,4 @@ player2_version = 25
 episodes = 2
 
 env = Game()
-playMatchesBetweenVersions(env, run_version, player1_version, player2_version, episodes, lg.logger_tourney, 0)
+playMatchesBetweenVersions(env, run_version, player1_version, player2_version, episodes, lg.logger_play_game, 0)
