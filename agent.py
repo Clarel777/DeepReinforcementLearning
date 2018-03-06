@@ -204,7 +204,7 @@ class Agent():
 			self.train_value_loss.append(round(fit.history['value_head_loss'][config.EPOCHS - 1],4)) 
 			self.train_policy_loss.append(round(fit.history['policy_head_loss'][config.EPOCHS - 1],4)) 
 
-                if not CLN:
+                if not config.CLN:
 			plt.plot(self.train_overall_loss, 'k')
 			plt.plot(self.train_value_loss, 'k:')
 			plt.plot(self.train_policy_loss, 'k--')

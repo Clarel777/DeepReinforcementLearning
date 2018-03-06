@@ -1,4 +1,5 @@
 
+CLN = True
 
 #### SELF PLAY
 EPISODES = 5
