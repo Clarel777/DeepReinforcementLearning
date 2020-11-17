@@ -74,7 +74,7 @@ class MCTS():
 			for action, edge in currentNode.edges:
 				Nb = Nb + edge.stats['N']
 
-                        simulatedAction = None
+			simulatedAction = None
 			for idx, (action, edge) in enumerate(currentNode.edges):
 
 				U = self.cpuct * \
@@ -84,8 +84,8 @@ class MCTS():
 				Q = edge.stats['Q']
 
 				lg.logger_mcts.info('action: %d (%d)... N = %d, P = %f, nu = %f, adjP = %f, W = %f, Q = %f, U = %f, Q+U = %f'
-					, action, action % 7, edge.stats['N'], round(edge.stats['P'],6), round(nu[idx],6), ((1-epsilon) * edge.stats['P'] + epsilon * nu[idx] )
-					, round(edge.stats['W'],6), round(Q,6), round(U,6), round(Q+U,6))
+					, action, action % 7, edge.stats['N'], np.around(edge.stats['P'],6), np.around(nu[idx],6), ((1-epsilon) * edge.stats['P'] + epsilon * nu[idx] )
+					, np.around(edge.stats['W'],6), np.around(Q,6), np.around(U,6), np.around(Q+U,6))
 
 				if Q + U > maxQU:
 					maxQU = Q + U
