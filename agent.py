@@ -24,7 +24,7 @@ class User():
 		self.action_size = action_size
 
 	def act(self, state, tau):
-		action = input('Enter your chosen action: ')
+		action = int(input('Enter your chosen action: '))
 		while action not in state.allowedActions:
 		        print "Action %s is not allowed." % action
 		        action = input('Enter your chosen action: ')
